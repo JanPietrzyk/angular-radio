@@ -1,0 +1,170 @@
+@media all {
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 10px;
+        background: transparent url("../images/background-2048px.jpg") top left repeat;
+    }
+    
+    header {
+        display: none;
+    }
+    
+    .content {
+        height: 95%;
+    }
+    
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+           
+    }
+    
+    .station-wrapper {
+        padding: 5%;
+        height: 60%    
+    }
+    
+    .station-container {
+        height: 67%;
+        padding: 5%;
+    }
+
+    
+    .station .loading {
+        -moz-transform: rotate(-33.7deg);
+        background-color: #D72104;
+        display: block;
+        height: 35px;
+        left: -14.5%;
+        position: absolute;
+        top: 47%;
+        width: 130%;
+        z-index: 1;
+        -webkit-transform:rotate(-33.7deg);
+        transform:rotate(-33.7deg);
+        overflow: hidden;
+    }
+    
+    .station .loading .type-one,
+    .station .loading .type-two {
+        display: inline-block;
+        height: 3.5em;
+        width: 3.5em;
+    }
+
+    .station {
+        padding: 5%;
+        position: relative;
+        width: 90%;
+        max-height: 100%;
+    }
+   
+    .station h2,
+    .station p {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        laft: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .station h2 {
+        margin-top: -0.5em;
+        font-size: 1200%;/*120px;*/
+        line-height: 1em;
+        height: auto;
+        text-align: center;
+    }
+
+    .station p {
+        text-align: center;
+        font-size: 700%; /*70px;*/
+        line-height: 1em;
+        height: auto;
+    }
+
+    .station p.region {
+        margin-top: -2.4em;
+    }
+
+    .station .freq {
+        margin-top: 1.4em;
+    }
+
+    .station .background {
+        border: 5px solid #fc3;
+        background-color: #fc3;
+        border-radius: 10px;
+        box-shadow:0 0 10px 2px #333;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .station .border {
+        border: 5px solid black;
+        background-color: #fc3;
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .station.hidden {
+        display: block;
+    }
+
+    .player  {
+        text-align: center;
+        height: 16%;
+        padding: 2%;
+    }
+
+    .player img {
+        display: inline-block;
+        height: 100%;
+    }
+
+    .player img.active {
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .station-wrapper {
+        padding: 5%;
+        width: 60%;
+        height: 90%;    
+    }
+    
+    .player {
+        height: 10em;
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        right: 5%;
+        width: auto;
+        margin-top: -3em;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 1024px) {
+     body {
+        font-size: 9px;
+     }
+}

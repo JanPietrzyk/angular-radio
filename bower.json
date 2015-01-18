@@ -1,0 +1,15 @@
+{
+    "directory": "libtest/",
+    "name": "angular-radio",
+    "version": "0.0.0",
+    "dependencies": {
+        "angular":          "*",
+        "angular-route":    "*",
+        "angular-sanitize": "*",
+        "angular-mocks":    "*",
+        "angular-carousel": "*",    
+        "jquery":           "*",
+        "underscore":       "*"
+    },
+    "analytics": false
+}

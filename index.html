@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="radio">
+<head>
+	<title> Lokalradio </title>
+
+	<meta charset="utf-8">
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-carousel/dist/angular-carousel.js"></script>
+        <script src="lib/angular-touch/angular-touch.js"></script>
+	<link rel="stylesheet" href="css/app.css" />
+	<link rel="stylesheet" href="lib/angular-carousel/dist/angular-carousel.css" />
+
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+	<script src="js/services.js"></script>
+</head> 
+<body> 
+    <header>
+        <h1>Lokalradio</h1>
+    </header>
+    <div class="content" ng-controller="Stations">
+        <div class="station-wrapper">
+            <ul rn-carousel rn-carousel-index="activeIndex" class="station-container" >
+                <li class="station station-id" ng-repeat="station in stations">
+                    <div class="background">
+                        <div class="border">
+                            <p class="region">{{region}}</p>
+                            <h2>{{station.title}}</h2>
+                            <p class="freq">{{station.freq}}</p>
+                            <div class="loading" ng-hide="playing && !loading"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="player" >
+            <img src="/images/play_s.png" ng-click="play()" ng-hide="playing" class="play" alt="play" />
+            <img src="/images/stop_s.png" ng-click="pause()" ng-show="playing" class="pause" alt="pause" />
+        </div>
+    </div>
+    <footer>
+        <a href="http://www.jpietrzyk.de">Jan Philipp Pietrzyk</a>
+    </footer>
+</body>
+</html>
